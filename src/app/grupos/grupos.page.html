@@ -1,14 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ion Blank
-    </ion-title>
+    <ion-title>Grupos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="body">
-  <div *ngFor="let nivel of listaNivelesEstudios">
-  <ion-card style="background-color: lightskyblue;" (click) = "goGrupos(nivel.idEstudios)">
+  <div *ngFor="let nivel of grupos">
+  <ion-card style="background-color: salmon; border-color: black;" (click) = "goHorario(nivel.idGrupo)">
   <ion-card-header style="text-align: center;">
    {{nivel.nombre}}
   </ion-card-header>

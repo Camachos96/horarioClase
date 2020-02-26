@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>horarioGrid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid *ngIf="loaded">
+    <ion-row *ngFor="let hora of horas">
+      <ion-col *ngFor="let dia of dias">
+        <ion-button (click)="openToast(horario.cuadrante[dia][hora].materias)" style="width: 50px; font-size: 10px;">{{horario.cuadrante[dia][hora].materias}}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+      <!-- <ion-col>{{horario.cuadrante[0][0].materias}}</ion-col>
+      <ion-col>{{horario.cuadrante[1][0].materias}}</ion-col>
+      <ion-col>{{horario.cuadrante[2][0].materias}}</ion-col>
+      <ion-col>{{horario.cuadrante[3][0].materias}}</ion-col>
+      <ion-col>{{horario.cuadrante[4][0].materias}}</ion-col> -->
